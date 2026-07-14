@@ -1,26 +1,115 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Brand colors */
+  --color-brand-primary: #199b62;
+  --color-brand-secondary: #347646;
+  --color-brand-accent: #5fffb9;
+  --color-brand-forest: #173921;
+  --color-brand-forest-mid: #085431;
+
+  /* Gradients */
+  --background-image-clinical-studies: linear-gradient(
+    0deg,
+    #173921 0%,
+    #085431 100%
+  );
+  --background-image-howto: radial-gradient(
+    ellipse at 50% 35%,
+    #0a5c38 0%,
+    #173921 75%
+  );
+
+  /* Semantic colors */
+  --color-sale-danger: #b91414;
+  --color-rating-star: #ff9001;
+
+  /* Surfaces */
+  --color-surface-page: #ffffff;
+  --color-surface-mint: #f2fffa;
+  --color-surface-blush: #fff7f6;
+  --color-surface-warm: #fffaf4;
+  --color-surface-dark: #121212;
+  --color-surface-placeholder: #e2e2e2;
+
+  /* Text */
+  --color-text-primary: #173921;
+  --color-text-muted: #6b7280;
+  --color-text-inverse: #ffffff;
+
+  /* Borders */
+  --color-border-primary: #199b62;
+  --color-border-subtle: #e5e7eb;
+  --color-border-muted: #cccccc;
+  --color-border-selected: #173921;
+
+  /* Fonts */
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-countdown: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+
+  /* Font sizes */
+  --text-label: 12px;
+  --text-label--line-height: 12px;
+  --text-body: 14px;
+  --text-body--line-height: 1.4;
+  --text-body-lg: 16px;
+  --text-body-lg--line-height: 1.4;
+  --text-subhead: 18px;
+  --text-subhead--line-height: 1.3;
+  --text-cta: 20px;
+  --text-cta--line-height: 1.3;
+  --text-title: 30px;
+  --text-title--line-height: 1.3;
+
+  /* Spacing */
+  --spacing-section-x: 15px;
+  --spacing-section-y: 50px;
+
+  /* Radius */
+  --radius-button: 10px;
+  --radius-card: 10px;
+  --radius-pill: 100px;
+
+  /* Shadows (inset borders) */
+  --shadow-bundle: inset 0 0 0 1px #cccccc;
+  --shadow-bundle-selected: inset 0 0 0 1px #173921;
+
+  /* Max width */
+  --container-content: 1200px;
+
+  /* Accordion motion */
+  --animate-accordion-down: accordion-down 300ms ease-out;
+  --animate-accordion-up: accordion-up 300ms ease-out;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
   }
 }
 
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-surface-page);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" role="img" aria-label="Placeholder">
+  <rect width="800" height="800" fill="#e2e2e2"/>
+  <rect x="80" y="80" width="640" height="640" fill="#d4d4d4" rx="16"/>
+  <text x="400" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" fill="#6b7280">PLACEHOLDER</text>
+  <text x="400" y="430" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" fill="#9ca3af">Replace with real media</text>
+</svg>
