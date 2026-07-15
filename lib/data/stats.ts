@@ -20,6 +20,6 @@ export const stats: StatItem[] = [
 
 export const statsQuote = {
   quote: "I can finally breathe without chest tightness. Sleep great now.",
-  name: "Emma T.",
+  name: "Lena T.",
   age: 42,
 };

@@ -1,115 +1,96 @@
 import type { Testimonial } from "@/lib/types";
 
-const testimonialImages = [
-  "/images/testimonials/2.jpeg",
-  "/images/testimonials/5.jpeg",
-  "/images/testimonials/6.jpeg",
-  "/images/testimonials/7.jpeg",
-  "/images/testimonials/8.jpeg",
-] as const;
-
-function testimonialImage(index: number) {
-  return testimonialImages[index % testimonialImages.length];
-}
-
-export const heroTestimonials: Testimonial[] = [
+const customers = [
   {
     id: "sarah",
-    quote:
-      "After just 7 days, I can finally breathe without that tight feeling in my chest. I actually sleep through the night now.",
     name: "Sarah M.",
-    age: 58,
-    verified: true,
-    imageAlt: "Sarah M. testimonial",
-    imageSrc: testimonialImage(0),
+    imageSrc: "/images/testimonials/5.jpeg",
+    shortQuote:
+      "It knocks my phlegm loose so I can cough it out—and I feel real relief for breathing too!",
+    quote:
+      "It makes my phlegm knock loose so you can cough it out and I truly feel a little relief for breathing too! Anything that will help me breathe that's not a prescription is worth a try and I still take my other medication but my breathing treatments have lessened for me. I love it",
   },
   {
-    id: "john",
+    id: "james",
+    name: "James K.",
+    imageSrc: "/images/testimonials/2.jpeg",
+    shortQuote:
+      "Helps with dry vocals and phlegm I can't cough up—and it has a sweet flavor that's easy to take!",
     quote:
-      "I quit smoking 3 years ago but my lungs still felt clogged. Within two weeks of using Breathe, I'm breathing easier.",
-    name: "John R.",
-    age: 47,
-    verified: true,
-    imageAlt: "John R. testimonial",
-    imageSrc: testimonialImage(1),
+      "It's impossible to sing, play the trumpet well, or even give a speech or teach a class, when your vocal apparatus is dry, dehydrated, or plagued with phlegm that you can't seem to cough up. This extract helps with all of these things, and it has a very sweet flavour that's easy to take!",
   },
   {
-    id: "linda",
+    id: "michael",
+    name: "Michael R.",
+    imageSrc: "/images/testimonials/3.jpeg",
+    shortQuote:
+      "Helped as an expectorant, soothed inflammation, and calmed a cough I'd had for years!",
     quote:
-      "I couldn't finish a sentence without coughing. After two weeks, the hacking stopped and I can talk normally again.",
-    name: "Linda M.",
-    age: 41,
-    verified: true,
-    imageAlt: "Linda M. testimonial",
-    imageSrc: testimonialImage(2),
-  },
-];
-
-export const socialProofTestimonials: Testimonial[] = [
-  {
-    id: "jennifer",
-    quote:
-      "I've had asthma my whole life and always relied on my inhaler. After three weeks with Breathe, I'm using it way less and breathing feels so much lighter.",
-    name: "Jennifer M.",
-    age: 39,
-    verified: true,
-    chips: ["Less Inhaler", "Easy Breathing"],
-    imageAlt: "Jennifer M. testimonial",
-    imageSrc: testimonialImage(0),
+      "I casually bought this extract but had no idea how truly effective it would be. I used it the last time I felt under the weather and it helped greatly as an expectorant, inflammation soother and actually calmed the persistent cough I had for years! I still cant believe it.",
   },
   {
-    id: "robert",
+    id: "lena",
+    name: "Lena T.",
+    imageSrc: "/images/testimonials/9.jpeg",
+    shortQuote:
+      "After years of seasonal issues, Breathe gave me real relief—breathing and comfort improved dramatically.",
     quote:
-      "Wheezing constantly from chronic bronchitis. After two weeks the tightness in my chest is almost completely gone. I can finally exercise again.",
-    name: "Robert S.",
-    age: 61,
-    verified: true,
-    chips: ["No Wheezing", "Active Again"],
-    imageAlt: "Robert S. testimonial",
-    imageSrc: testimonialImage(1),
-  },
-  {
-    id: "karen",
-    quote:
-      "Woke up every single morning congested with mucus in my throat. After just one week, I'm waking up clear and breathing freely. Life-changing.",
-    name: "Karen S.",
-    age: 48,
-    verified: true,
-    chips: ["Morning Clarity", "Fast Relief"],
-    imageAlt: "Karen S. testimonial",
-    imageSrc: testimonialImage(2),
-  },
-  {
-    id: "mike",
-    quote:
-      "I work in construction and dust always made me cough all day. Started using Breathe and within 10 days, my lungs feel clearer than they have in years.",
-    name: "Mike D.",
-    age: 42,
-    verified: true,
-    chips: ["Dust Free", "Clearer Lungs"],
-    imageAlt: "Mike D. testimonial",
-    imageSrc: testimonialImage(3),
-  },
-  {
-    id: "lauren",
-    quote:
-      "Allergies kept my chest tight year-round. Breathe cleared out the congestion in about two weeks and now I can breathe deep without wheezing.",
-    name: "Lauren B.",
-    age: 36,
-    verified: true,
-    chips: ["Allergy Support", "Deep Breathing"],
-    imageAlt: "Lauren B. testimonial",
-    imageSrc: testimonialImage(4),
+      "After struggling with seasonal issues for years, I finally found something that actually provides relief! Breathe has become an essential part of my daily routine, and I've noticed a dramatic improvement in my breathing and overall comfort.",
   },
   {
     id: "david",
+    name: "David W.",
+    imageSrc: "/images/testimonials/4.jpeg",
+    shortQuote:
+      "Game-changer for speaking—soothes my throat so I can talk clearly without strain.",
     quote:
-      "I have COPD for years and was struggling badly. I've been taking Breathe for three weeks and my breathing has improved noticeably. I'm so grateful.",
-    name: "David R.",
-    age: 47,
-    verified: true,
-    chips: ["COPD Support", "Life Changing"],
-    imageAlt: "David R. testimonial",
-    imageSrc: testimonialImage(0),
+      "As someone who spends hours speaking in front of audiences, maintaining vocal health is crucial for me. This extract has been a game-changer - it soothes my throat and helps me speak clearly without strain or discomfort. Highly recommended for public speakers!",
   },
-];
+  {
+    id: "sophia",
+    name: "Sophia L.",
+    imageSrc: "/images/testimonials/6.jpeg",
+    shortQuote:
+      "After one week, big improvements in my breathing—especially on morning jogs!",
+    quote:
+      "I was skeptical at first, but after just one week of using Breathe, I noticed significant improvements in my breathing, especially during my morning jogs. It's become an essential part of my wellness routine!",
+  },
+  {
+    id: "emma",
+    name: "Emma J.",
+    imageSrc: "/images/testimonials/7.jpeg",
+    shortQuote:
+      "Fewer asthma flare-ups and better breathing control. This changed my quality of life!",
+    quote:
+      "Living with asthma has always been challenging, but since incorporating Breathe into my daily health regimen, I've experienced fewer flare-ups and much better breathing control. This natural solution has truly changed my quality of life!",
+  },
+] as const;
+
+function toTestimonial(
+  customer: (typeof customers)[number],
+  quote: string,
+): Testimonial {
+  const testimonial: Testimonial = {
+    id: customer.id,
+    name: customer.name,
+    quote,
+    verified: true,
+    imageAlt: `${customer.name} testimonial`,
+  };
+
+  if ("imageSrc" in customer) {
+    testimonial.imageSrc = customer.imageSrc;
+  }
+
+  return testimonial;
+}
+
+/** Hero cards — same customers, shorter quotes */
+export const heroTestimonials: Testimonial[] = customers.map((c) =>
+  toTestimonial(c, c.shortQuote),
+);
+
+/** Social proof carousel — full quotes */
+export const socialProofTestimonials: Testimonial[] = customers.map((c) =>
+  toTestimonial(c, c.quote),
+);

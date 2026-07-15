@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { BenefitChip } from "@/components/product/BenefitChip";
 import { BundleOptionCard } from "@/components/product/BundleOptionCard";
+import { AmazonApprovedBadge } from "@/components/product/AmazonApprovedBadge";
 import { ProductGalleryThumb } from "@/components/product/ProductGalleryThumb";
 import { HeroTestimonialCarousel } from "@/components/sections/HeroTestimonialCarousel";
 import { ProductDescriptionTabs } from "@/components/sections/ProductDescriptionTabs";
@@ -16,6 +17,7 @@ import { Price } from "@/components/ui/Price";
 import { StarRating } from "@/components/ui/StarRating";
 import { heroBenefits } from "@/lib/data/benefits";
 import { bundleOptions, productInfo } from "@/lib/data/bundles";
+import { getDeliveryEta } from "@/lib/utils/deliveryEta";
 
 const gallerySlides = [
   {
@@ -32,8 +34,24 @@ const gallerySlides = [
     id: "g3",
     src: "/images/hero/Bteathe-Box_60-ML_mockup-2oz.png",
     alt: "Breathe 60ml box mockup",
-
   },
+
+  {
+    id: "g4",
+    src: "/images/hero/71fxfnnpkHL._AC_SL1500_.jpg",
+    alt: "Breathe 2oz bottle mockup",
+  },
+  {
+    id: "g5",
+    src: "/images/hero/71ro6-p3vLL._AC_SL1500_.jpg",
+    alt: "Breathe 2oz bottle mockup",
+  },
+  {
+    id: "g6",
+    src: "/images/hero/81cUI82M-IL._AC_SL1500_.jpg",
+    alt: "Breathe 2oz bottle mockup",
+  },
+
 ];
 
 export function HeroBuyBox() {
@@ -54,6 +72,7 @@ export function HeroBuyBox() {
   const compareTotal =
     (activeBundle.compareAtPrice ?? activeBundle.price) *
     (selectedBundle === "buy3get3" ? 6 : selectedBundle === "buy2get1" ? 3 : 1);
+  const shipEta = getDeliveryEta(productInfo.shipEtaMaxDays);
 
   return (
     <section id="hero" className="overflow-x-clip bg-surface-page">
@@ -79,9 +98,9 @@ export function HeroBuyBox() {
       <div className="mx-auto grid max-w-content items-start gap-8 overflow-x-clip px-section-x py-section-y lg:grid-cols-2 lg:gap-12">
         {/* Gallery column — sticky; buy box scrolls independently so accordion expands don't shift it */}
         <div className="min-w-0 space-y-4 lg:sticky lg:top-[30px]">
-          <div className="flex min-w-0 flex-col gap-3 md:flex-row md:items-start">
-            {/* Thumbs: horizontal scroll on mobile, vertical column on md+ */}
-            <div className="order-2 flex min-w-0 gap-2 overflow-x-auto pb-1 md:order-1 md:flex-col md:overflow-visible md:pb-0">
+          <div className="grid min-w-0 grid-cols-1 gap-3 md:grid-cols-[auto_minmax(0,1fr)]">
+            {/* Thumbs: horizontal on mobile; same height as main image + vertical scroll on md+ */}
+            <div className="order-2 flex min-w-0 gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:order-1 md:h-0 md:min-h-full md:flex-col md:gap-2 md:overflow-x-hidden md:overflow-y-auto md:pb-0">
               {gallerySlides.map((slide, i) => (
                 <ProductGalleryThumb
                   key={slide.id}
@@ -94,7 +113,8 @@ export function HeroBuyBox() {
             </div>
 
             {/* Active image */}
-            <div className="relative order-1 aspect-square min-w-0 flex-1 overflow-hidden rounded-card border border-border-subtle md:order-2">
+            <div className="relative order-1 aspect-square min-w-0 overflow-hidden rounded-card border border-border-subtle md:order-2">
+              <AmazonApprovedBadge />
               <Image
                 src={gallerySlides[activeImage].src}
                 alt={gallerySlides[activeImage].alt}
@@ -178,7 +198,7 @@ export function HeroBuyBox() {
             </span>
             <span>
               {productInfo.shipEtaPrefix}{" "}
-              <span className="font-bold">{productInfo.shipEtaDate}</span>
+              <span className="font-bold">{shipEta.short}</span>
             </span>
           </p>
 

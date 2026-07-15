@@ -42,8 +42,8 @@ export const productInfo = {
   subtitle:
     "Breathe is a natural solution designed to help clear stubborn mucus from the lungs and support overall respiratory health. Formulated with natural mucilage and demulcents like mullein, Manuka honey, and thyme, it soothes the airways and promotes optimal lung function.",
   rating: 4.9,
-  reviewCount: "4,537+",
+  reviewCount: "+1,593",
   soldToday: "800+ sold today",
   shipEtaPrefix: "Ready to ship, Arrives by",
-  shipEtaDate: "Jul 21",
+  shipEtaMaxDays: 3,
 };

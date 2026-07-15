@@ -10,19 +10,26 @@ export function SocialProofCarousel() {
     <section className="bg-surface-page">
       <div className="mx-auto max-w-content px-section-x py-section-y">
         <div className="mx-auto max-w-3xl text-center">
+          <p className="mb-4 inline-flex rounded-pill border border-brand-primary/20 bg-brand-primary/5 px-5 py-2 text-body font-bold text-brand-primary">
+            Trusted By Over 2,000 Customers
+          </p>
           <h2 className="text-title font-bold text-brand-secondary">
-            Over 2,400 With Breathing Problems{" "}
-            <span className="text-brand-accent">
-              Can Breathe Easy Again Thanks To Breathe
-            </span>
+            What Our{" "}
+            <span className="text-brand-accent">Customers</span> Are Saying
           </h2>
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-body-lg sm:text-lg text-text-muted">
+          <div className="mx-auto mt-3 h-1 w-24 rounded-full bg-brand-cta" />
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-body-lg text-text-muted sm:text-lg">
             <StarRating rating={5} className="text-brand-primary" />
-            <p>
-              Trusted by{" "}
-              <span className="font-bold text-text-primary">100,000+</span>{" "}
-              customers
-            </p>
+            <a
+              href="https://www.amazon.com/Breathe-mullein-drops-for-lungs/dp/B0DLBKSB28?th=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:underline"
+            >
+              Real reviews from{" "}
+              <span className="font-bold text-text-primary">1593 Verified Buyers</span>
+            </a>
+       
           </div>
         </div>
 
@@ -32,6 +39,7 @@ export function SocialProofCarousel() {
             align="start"
             showArrows={false}
             showDots
+            autoplay
           >
             {socialProofTestimonials.map((t) => (
               <CarouselSlide

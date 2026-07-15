@@ -14,7 +14,7 @@ export function StatsSection() {
 
         <div className="relative aspect-3/4 overflow-hidden rounded-card">
           <Image
-            src="/images/testimonials/6.jpeg"
+            src="/images/testimonials/9.jpeg"
             alt="Customer holding Breathe bottle"
             fill
             sizes="(max-width: 1024px) 50vw, 25vw"

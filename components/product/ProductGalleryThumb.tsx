@@ -18,14 +18,15 @@ export function ProductGalleryThumb({
       type="button"
       onClick={onClick}
       aria-pressed={selected}
-      className={`relative h-20 w-20 shrink-0 overflow-hidden border rounded-card border-border-subtle transition-shadow sm:h-24 sm:w-24 md:h-28 md:w-28 ${selected ? "shadow-bundle-selected" : "shadow-bundle opacity-80"
+      className={`relative size-16 shrink-0 overflow-hidden rounded-card border border-border-subtle transition-shadow sm:size-20 md:size-[72px] lg:size-20 ${
+          selected ? "shadow-bundle-selected" : "shadow-bundle opacity-80"
         }`}
     >
       <Image
         src={src}
         alt={alt}
         fill
-        sizes="(max-width: 640px) 80px, (max-width: 768px) 96px, 112px"
+        sizes="80px"
         className="object-contain p-1"
       />
     </button>
