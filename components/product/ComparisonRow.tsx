@@ -22,11 +22,11 @@ export function ComparisonRowCard({ row, isLast = false }: ComparisonRowProps) {
         aria-label={row.pulmoria ? "Yes" : "No"}
       >
         {row.pulmoria ? (
-          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-primary text-text-inverse">
+          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-accent text-brand-forest">
             <IconWrapper name="check" size={14} strokeWidth={3} />
           </span>
         ) : (
-          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-sale-danger text-sale-danger">
+          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-brand-accent text-brand-accent">
             <IconWrapper name="x" size={14} strokeWidth={3} />
           </span>
         )}

@@ -15,11 +15,12 @@ export function TrustBadge({
   if (variant === "announcement") {
     return (
       <div
-        className={`inline-flex items-center gap-2 text-body text-text-inverse ${isFirst ? "" : "border-l border-white pl-2"
-          }`}
+        className={`flex min-w-0 flex-1 items-center justify-center gap-1.5 text-center text-[11px] leading-tight text-text-inverse sm:gap-2 sm:text-body sm:leading-normal ${
+          isFirst ? "" : "border-l border-white pl-1.5 sm:pl-2"
+        }`}
       >
-        <IconWrapper name={item.icon} size={16} />
-        <span>{item.label}</span>
+        <IconWrapper name={item.icon} size={15} className="shrink-0" />
+        <span className="truncate">{item.label}</span>
       </div>
     );
   }

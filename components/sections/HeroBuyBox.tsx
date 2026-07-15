@@ -5,10 +5,10 @@ import Image from "next/image";
 import { BenefitChip } from "@/components/product/BenefitChip";
 import { BundleOptionCard } from "@/components/product/BundleOptionCard";
 import { ProductGalleryThumb } from "@/components/product/ProductGalleryThumb";
-import { TestimonialCard } from "@/components/product/TestimonialCard";
+import { HeroTestimonialCarousel } from "@/components/sections/HeroTestimonialCarousel";
 import { ProductDescriptionTabs } from "@/components/sections/ProductDescriptionTabs";
+import { TestimonialVideoGrid } from "@/components/sections/TestimonialVideoGrid";
 import { Button } from "@/components/ui/Button";
-import { Carousel, CarouselSlide } from "@/components/ui/Carousel";
 import { CountdownTimer } from "@/components/ui/CountdownTimer";
 import { IconWrapper } from "@/components/ui/IconWrapper";
 import { PaymentMethodIcons } from "@/components/ui/PaymentMethodIcons";
@@ -16,7 +16,6 @@ import { Price } from "@/components/ui/Price";
 import { StarRating } from "@/components/ui/StarRating";
 import { heroBenefits } from "@/lib/data/benefits";
 import { bundleOptions, productInfo } from "@/lib/data/bundles";
-import { heroTestimonials } from "@/lib/data/testimonials";
 
 const gallerySlides = [
   {
@@ -77,9 +76,9 @@ export function HeroBuyBox() {
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-content gap-8 overflow-x-clip px-section-x py-section-y lg:grid-cols-2 lg:gap-12">
-        {/* Gallery column */}
-        <div className="min-w-0 space-y-4 lg:sticky lg:top-[30px] lg:self-start">
+      <div className="mx-auto grid max-w-content items-start gap-8 overflow-x-clip px-section-x py-section-y lg:grid-cols-2 lg:gap-12">
+        {/* Gallery column — sticky; buy box scrolls independently so accordion expands don't shift it */}
+        <div className="min-w-0 space-y-4 lg:sticky lg:top-[30px]">
           <div className="flex min-w-0 flex-col gap-3 md:flex-row md:items-start">
             {/* Thumbs: horizontal scroll on mobile, vertical column on md+ */}
             <div className="order-2 flex min-w-0 gap-2 overflow-x-auto pb-1 md:order-1 md:flex-col md:overflow-visible md:pb-0">
@@ -109,18 +108,12 @@ export function HeroBuyBox() {
 
           {/* Mini testimonials — desktop companion */}
           <div className="hidden min-w-0 lg:block">
-            <Carousel showArrows={false} loop>
-              {heroTestimonials.map((t) => (
-                <CarouselSlide key={t.id} className="basis-full pr-2">
-                  <TestimonialCard testimonial={t} compact />
-                </CarouselSlide>
-              ))}
-            </Carousel>
+            <HeroTestimonialCarousel />
           </div>
         </div>
 
-        {/* Buy box */}
-        <div className="min-w-0 lg:sticky lg:top-[30px] lg:self-start">
+        {/* Buy box — not sticky, so accordion expand/collapse doesn't move the gallery */}
+        <div className="min-w-0">
           <div className="mb-3 flex flex-wrap items-center gap-2 text-body">
             <StarRating rating={productInfo.rating} showValue />
             <span className="font-medium">
@@ -194,7 +187,6 @@ export function HeroBuyBox() {
             <Price
               amount={cartTotal}
               compareAt={compareTotal}
-              inverted
               size="md"
             />
           </Button>
@@ -221,15 +213,13 @@ export function HeroBuyBox() {
             <ProductDescriptionTabs />
           </div>
 
+          <div className="mt-6">
+            <TestimonialVideoGrid />
+          </div>
+
           {/* Mobile mini testimonials */}
           <div className="mt-6 min-w-0 lg:hidden">
-            <Carousel showArrows={false} loop>
-              {heroTestimonials.map((t) => (
-                <CarouselSlide key={t.id} className="basis-full pr-2">
-                  <TestimonialCard testimonial={t} compact />
-                </CarouselSlide>
-              ))}
-            </Carousel>
+            <HeroTestimonialCarousel />
           </div>
         </div>
       </div>

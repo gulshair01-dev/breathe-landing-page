@@ -1,47 +1,48 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand colors */
-  --color-brand-primary: #199b62;
-  --color-brand-secondary: #347646;
-  --color-brand-accent: #5fffb9;
-  --color-brand-forest: #173921;
-  --color-brand-forest-mid: #085431;
+  /* Brand colors — navy / deep teal (Herbal Tea Therapy Breathe palette) */
+  --color-brand-primary: #0a2b51;
+  --color-brand-secondary: #05414a;
+  --color-brand-accent: #7eede0;
+  --color-brand-cta: #ff9900;
+  --color-brand-forest: #061628;
+  --color-brand-forest-mid: #0c2a50;
 
   /* Gradients */
   --background-image-clinical-studies: linear-gradient(
     0deg,
-    #173921 0%,
-    #085431 100%
+    #061628 0%,
+    #0a2b51 100%
   );
   --background-image-howto: radial-gradient(
     ellipse at 50% 35%,
-    #0a5c38 0%,
-    #173921 75%
+    #0d3f5c 0%,
+    #061628 75%
   );
 
   /* Semantic colors */
-  --color-sale-danger: #b91414;
-  --color-rating-star: #ff9001;
+  --color-sale-danger: #d91c01;
+  --color-rating-star: #fbcd0a;
 
   /* Surfaces */
   --color-surface-page: #ffffff;
-  --color-surface-mint: #f2fffa;
+  --color-surface-mint: #edf5f5;
   --color-surface-blush: #fff7f6;
   --color-surface-warm: #fffaf4;
   --color-surface-dark: #121212;
   --color-surface-placeholder: #e2e2e2;
 
   /* Text */
-  --color-text-primary: #173921;
+  --color-text-primary: #061628;
   --color-text-muted: #6b7280;
   --color-text-inverse: #ffffff;
 
   /* Borders */
-  --color-border-primary: #199b62;
+  --color-border-primary: #0a2b51;
   --color-border-subtle: #e5e7eb;
   --color-border-muted: #cccccc;
-  --color-border-selected: #173921;
+  --color-border-selected: #061628;
 
   /* Fonts */
   --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
@@ -72,7 +73,7 @@
 
   /* Shadows (inset borders) */
   --shadow-bundle: inset 0 0 0 1px #cccccc;
-  --shadow-bundle-selected: inset 0 0 0 1px #173921;
+  --shadow-bundle-selected: inset 0 0 0 1px #061628;
 
   /* Max width */
   --container-content: 1200px;

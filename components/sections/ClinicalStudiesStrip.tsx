@@ -6,8 +6,8 @@ export function ClinicalStudiesStrip() {
     <section className="bg-clinical-studies">
       <div className="mx-auto max-w-3xl px-section-x py-section-y text-center w-full">
         <h2 className="text-title font-bold text-text-inverse">
-          Research-Backed Ingredients{" "}
-          <span className="text-brand-accent">As Seen In Clinical Studies</span>
+          Doctor Approved Ingredients To Help You{" "}
+          <span className="text-brand-accent">Breathe Better Naturally</span>
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-body-lg sm:text-lg text-text-inverse">
           These natural extracts and plant compounds have been{" "}

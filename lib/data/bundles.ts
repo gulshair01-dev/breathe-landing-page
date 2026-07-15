@@ -31,7 +31,7 @@ export const bundleOptions: BundleOption[] = [
     badge: "best-value",
     shippingNote: "6 Bottles + Free shipping",
     freeGift: {
-      label: "FREE Nutrition Guide",
+      label: "Improved Breathing Course",
       value: 50,
     },
   },

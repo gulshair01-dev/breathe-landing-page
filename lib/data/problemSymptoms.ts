@@ -10,8 +10,8 @@ export const problemIntro = {
   ],
   listHeader: "That's why so many people notice:",
   negativeCallout:
-    "That's why traditional treatments simply don't work for people dealing with this hidden lung buildup.",
-  positiveCallout: "But now, science has found a way to restore it.",
+    "That's why traditional treatments simply don't work for people dealing with this trapped mucus buildup.",
+  positiveCallout: "But now, science has found a way to clear it naturally.",
 };
 
 export const problemSymptoms: ProblemSymptom[] = [

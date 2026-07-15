@@ -48,10 +48,10 @@ export function IngredientsGrid() {
 
           <div>
             <h2 className="text-title font-bold">
-              <span className="text-brand-primary">
+              <span className="text-brand-secondary">
                 {ingredientsIntro.midCtaHeadlineBefore}
               </span>
-              <span className="text-text-primary">
+              <span className="text-brand-accent">
                 {ingredientsIntro.midCtaHeadlineAfter}
               </span>
             </h2>
@@ -88,7 +88,7 @@ export function IngredientsGrid() {
               <span className="text-brand-secondary">
                 {ingredientsIntro.sectionHeadlineBefore}
               </span>
-              <span className="text-text-primary">
+              <span className="text-brand-accent">
                 {ingredientsIntro.sectionHeadlineAfter}
               </span>
             </h2>
@@ -98,7 +98,7 @@ export function IngredientsGrid() {
           </div>
 
           <div className="mt-10">
-            <Carousel loop align="start" showArrows={false} showDots>
+            <Carousel loop align="start" showArrows={false} showDots autoplay>
               {ingredients.map((ingredient) => (
                 <CarouselSlide
                   key={ingredient.id}

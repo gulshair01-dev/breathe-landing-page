@@ -9,7 +9,7 @@ export function Header() {
           href="/"
           className="text-center text-xl font-black tracking-tight text-brand-forest"
         >
-          PULMORIA
+          Breathe®
         </Link>
         <div className="flex justify-end">
           <button

@@ -4,9 +4,9 @@ export const timelineIntro = {
   headlineBefore: "Works For Anyone With Breathing Issues, ",
   headlineAccent: "Including Smokers & Ex-Smokers",
   subhead:
-    "Love the way you feel when breathing again. Say goodbye to chest tightness for good.",
-  imageAlt: "Person breathing comfortably outdoors",
-  imageSrc: "/images/placeholder.svg",
+    "Love the way you feel when breathing again. Say goodbye to breathing problems and excess mucus for good",
+  imageAlt: "Breathe production team",
+  imageSrc: "/images/team-narsingdi-3.webp",
 };
 
 export const timelineSteps: TimelineStep[] = [

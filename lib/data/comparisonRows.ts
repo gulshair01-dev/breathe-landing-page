@@ -4,7 +4,7 @@ export const comparisonIntro = {
   headlineBefore: "See the Difference",
   headlineAfter: " for Yourself",
   subhead:
-    "While others soothe temporarily, Pulmoria targets trapped mucus at the source.",
+    "While others soothe temporarily, Breathe targets trapped mucus at the source.",
 };
 
 export const comparisonRows: ComparisonRow[] = [

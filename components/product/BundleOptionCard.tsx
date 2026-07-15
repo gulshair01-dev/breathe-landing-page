@@ -19,8 +19,8 @@ export function BundleOptionCard({
       type="button"
       onClick={() => onSelect(option.id)}
       className={`relative w-full cursor-pointer rounded-card text-left transition-shadow ${selected
-          ? "bg-surface-warm shadow-bundle-selected"
-          : "bg-surface-page shadow-bundle"
+        ? "bg-surface-warm shadow-bundle-selected"
+        : "bg-surface-page shadow-bundle"
         }`}
     >
       {option.badge === "most-popular" ? (
@@ -49,14 +49,6 @@ export function BundleOptionCard({
 
       {option.freeGift ? (
         <div className="flex w-full items-center gap-2 rounded-b-card bg-brand-forest px-3 py-2">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={PLACEHOLDER_IMAGE}
-            alt=""
-            width={30}
-            height={30}
-            className="h-[30px] w-[30px] shrink-0 rounded object-cover"
-          />
           <span className="text-body font-bold text-text-inverse">
             {option.freeGift.label}
           </span>

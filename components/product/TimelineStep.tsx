@@ -24,7 +24,7 @@ export function TimelineStepCard({ step }: TimelineStepProps) {
             className="flex items-center gap-2.5 text-body-lg text-text-inverse"
           >
             <span >
-              <IconWrapper name="badge-check" size={18} className="text-brand-primary" />
+              <IconWrapper name="badge-check" size={18} className="text-brand-accent" />
             </span>
             <span>{bullet}</span>
           </li>

@@ -1,9 +1,11 @@
 "use client";
 
+import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import {
   useCallback,
   useEffect,
+  useMemo,
   useState,
   type ReactNode,
 } from "react";
@@ -18,6 +20,8 @@ export interface CarouselProps {
   showDots?: boolean;
   loop?: boolean;
   align?: "start" | "center" | "end";
+  autoplay?: boolean;
+  autoplayDelay?: number;
 }
 
 export function Carousel({
@@ -29,8 +33,24 @@ export function Carousel({
   showDots = false,
   loop = true,
   align = "start",
+  autoplay = false,
+  autoplayDelay = 4500,
 }: CarouselProps) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop, align });
+  const plugins = useMemo(
+    () =>
+      autoplay
+        ? [
+            Autoplay({
+              delay: autoplayDelay,
+              stopOnInteraction: false,
+              stopOnMouseEnter: true,
+            }),
+          ]
+        : [],
+    [autoplay, autoplayDelay],
+  );
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop, align }, plugins);
   const [canPrev, setCanPrev] = useState(false);
   const [canNext, setCanNext] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);

@@ -10,13 +10,13 @@ export function ExpertQuoteCard({ expert }: ExpertQuoteCardProps) {
   return (
     <article className="rounded-xl border border-brand-primary/30 bg-surface-page p-6 sm:p-7">
       <div className="mb-5 flex items-center gap-3">
-        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full bg-surface-placeholder">
+        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full">
           <Image
             src={expert.imageSrc ?? "/images/placeholder.svg"}
             alt={expert.imageAlt}
             fill
             sizes="56px"
-            className="object-cover"
+            className="object-cover object-center"
           />
         </div>
         <div className="min-w-0">

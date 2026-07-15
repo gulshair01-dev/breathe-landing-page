@@ -10,10 +10,10 @@ export function SocialProofCarousel() {
     <section className="bg-surface-page">
       <div className="mx-auto max-w-content px-section-x py-section-y">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-title font-bold  text-brand-secondary">
+          <h2 className="text-title font-bold text-brand-secondary">
             Over 2,400 With Breathing Problems{" "}
-            <span className="text-text-primary">
-              Can Breathe Easy Again Thanks To Pulmoria
+            <span className="text-brand-accent">
+              Can Breathe Easy Again Thanks To Breathe
             </span>
           </h2>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-body-lg sm:text-lg text-text-muted">

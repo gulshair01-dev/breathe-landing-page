@@ -3,7 +3,7 @@ import type { FaqItemData } from "@/lib/types";
 export const faqs: FaqItemData[] = [
   {
     id: "what-does",
-    question: "What exactly does Pulmoria do?",
+    question: "What exactly does Breathe do?",
     answer:
       "It supports your lungs' natural mucus clearance, helping reduce chest tightness, chronic coughing, and breathing discomfort while promoting healthy airways and easier breathing every day.",
   },
@@ -23,7 +23,7 @@ export const faqs: FaqItemData[] = [
     id: "taste",
     question: "Does it have a weird taste?",
     answer:
-      "Not at all! Pulmoria has a natural, mild herbal flavor with hints of ginger and lemon. Most people find it pleasant, and you can easily mix it with water, juice, or tea if you prefer. Many users actually enjoy taking it straight under the tongue for faster absorption.",
+      "Not at all! Breathe has a natural, mild herbal flavor with hints of ginger and lemon. Most people find it pleasant, and you can easily mix it with water, juice, or tea if you prefer. Many users actually enjoy taking it straight under the tongue for faster absorption.",
   },
   {
     id: "safe",
@@ -35,13 +35,13 @@ export const faqs: FaqItemData[] = [
     id: "with-others",
     question: "Can I take it with other supplements?",
     answer:
-      "Absolutely. Pulmoria pairs well with most vitamins and wellness formulas. If you're taking multiple tinctures, just space them by 20–30 minutes for best absorption.",
+      "Absolutely. Breathe pairs well with most vitamins and wellness formulas. If you're taking multiple tinctures, just space them by 20–30 minutes for best absorption.",
   },
   {
     id: "made",
     question: "Where is it made?",
     answer:
-      "Pulmoria is formulated and bottled in the USA in GMP-certified facilities that follow strict quality and safety standards.",
+      "Breathe is formulated and bottled in the USA in GMP-certified facilities that follow strict quality and safety standards.",
   },
   {
     id: "guarantee",

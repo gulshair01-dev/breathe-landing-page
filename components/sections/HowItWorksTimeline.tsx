@@ -9,13 +9,13 @@ export function HowItWorksTimeline() {
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
           {/* Left: image + intro */}
           <div className="lg:sticky lg:top-[30px]">
-            <div className="relative mx-auto aspect-4/3 w-full max-w-xl overflow-hidden rounded-2xl bg-surface-placeholder lg:mx-0">
+            <div className="relative mx-auto aspect-4/3 w-full max-w-xl overflow-hidden rounded-2xl lg:mx-0">
               <Image
                 src={timelineIntro.imageSrc}
                 alt={timelineIntro.imageAlt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-cover object-center"
               />
             </div>
 

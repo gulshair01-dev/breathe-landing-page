@@ -12,13 +12,13 @@ export function StatsSection() {
         {first ? <StatCard stat={first} /> : null}
         {second ? <StatCard stat={second} /> : null}
 
-        <div className="relative aspect-3/4 ">
+        <div className="relative aspect-3/4 overflow-hidden rounded-card">
           <Image
-            src="/images/placeholder.svg"
-            alt="Customer holding Pulmoria bottle"
+            src="/images/testimonials/6.jpeg"
+            alt="Customer holding Breathe bottle"
             fill
             sizes="(max-width: 1024px) 50vw, 25vw"
-            className="rounded-card object-cover"
+            className="object-cover object-center"
           />
         </div>
 

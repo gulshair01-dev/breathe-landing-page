@@ -15,7 +15,7 @@ export function IngredientCard({ ingredient }: IngredientCardProps) {
             alt={ingredient.imageAlt}
             fill
             sizes="56px"
-            className="object-cover"
+            className="object-cover object-center"
           />
         </div>
         <div className="min-w-0">

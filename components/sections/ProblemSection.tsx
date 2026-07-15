@@ -11,7 +11,7 @@ export function ProblemSection() {
           <div>
             <h2 className="text-title font-bold text-text-primary">
               {problemIntro.headlineBefore}
-              <span className="text-brand-primary">
+              <span className="text-brand-accent">
                 {problemIntro.headlineAccent}
               </span>
               {problemIntro.headlineAfter}

@@ -6,9 +6,9 @@ export function ExpertQuotesGrid() {
     <section className="border-t border-brand-forest bg-surface-mint">
       <div className="mx-auto max-w-content px-section-x py-section-y">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-title font-bold text-text-primary">
+          <h2 className="text-title font-bold text-brand-secondary">
             {expertQuotesIntro.headlineBefore}
-            <span className="text-brand-primary">
+            <span className="text-brand-accent">
               {expertQuotesIntro.headlineAccent}
             </span>
           </h2>
@@ -17,7 +17,7 @@ export function ExpertQuotesGrid() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 md:gap-8 max-w-4xl mx-auto">
+        <div className="mt-10 grid gap-2 md:grid-cols-2 md:gap-4 max-w-4xl mx-auto">
           {expertQuotes.map((expert) => (
             <ExpertQuoteCard key={expert.id} expert={expert} />
           ))}

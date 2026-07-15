@@ -19,7 +19,7 @@ export function Button({
   const base =
     "inline-flex items-center justify-center gap-2 rounded-button px-[15px] py-5 text-cta font-bold uppercase tracking-wide transition-opacity hover:opacity-90 disabled:opacity-50";
   const variants = {
-    primary: "bg-brand-primary text-text-inverse",
+    primary: "bg-brand-cta text-brand-forest",
     secondary: "bg-brand-secondary text-brand-accent",
   };
 

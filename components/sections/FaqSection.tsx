@@ -18,7 +18,7 @@ export function FaqSection() {
 
         <Accordion
           items={items}
-          className="!grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4"
+          className="mx-auto max-w-3xl"
           itemClassName="border-white/15 bg-white/10"
           triggerClassName="text-body-lg font-medium text-text-inverse sm:text-subhead"
           contentClassName="text-text-inverse/85"

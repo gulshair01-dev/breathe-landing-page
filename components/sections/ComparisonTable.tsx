@@ -11,7 +11,7 @@ export function ComparisonTable() {
               <span className="text-brand-secondary">
                 {comparisonIntro.headlineBefore}
               </span>
-              <span className="text-text-primary">
+              <span className="text-brand-accent">
                 {comparisonIntro.headlineAfter}
               </span>
             </h2>
@@ -25,7 +25,7 @@ export function ComparisonTable() {
             <div className="grid grid-cols-[minmax(0,1fr)_96px_80px] items-end sm:grid-cols-[minmax(0,1fr)_120px_96px]">
               <span />
               <span className="rounded-t-md bg-brand-forest px-2 py-2.5 text-center text-label font-bold uppercase tracking-wide text-text-inverse sm:text-body">
-                Pulmoria
+                Breathe
               </span>
               <span className="px-2 py-2.5 text-center text-body font-bold text-text-primary">
                 Others
